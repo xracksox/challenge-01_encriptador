@@ -19,22 +19,20 @@ function encriptar() {
     var validarTexto = /^[(a-z)+(0-9)+(\u00f1) ]*$/;
     // alert(validarTexto.test(texto)); 
 
-if (validarTexto.test(texto)) {
-    
-    var textoAprocess = texto.split("");
-    for (let i = 0; i < textoAprocess.length; i++) {
-        textoAprocess[i] = textoAprocess[i].replace("e", "enter")
-        textoAprocess[i] = textoAprocess[i].replace("i", "imes")
-        textoAprocess[i] = textoAprocess[i].replace("a", "ai")
-        textoAprocess[i] = textoAprocess[i].replace("o", "ober")
-        textoAprocess[i] = textoAprocess[i].replace("u", "ufat")
+    if (validarTexto.test(texto)) {
+
+        var textoEncriptado = texto
+        .replaceAll("e", "enter")
+        .replaceAll("i", "imes")
+        .replaceAll("a", "ai")
+        .replaceAll("o", "ober")
+        .replaceAll("u", "ufat")
+
+        document.querySelector("#resultado").innerHTML = textoEncriptado;
+
+    } else {
+        alert("No se permiten mayúsculas, acentos ni caracteres especiales")
     }
-    document.querySelector("#resultado").innerHTML = textoAprocess;
-    var textoResultado = textoAprocess.join("");
-    document.querySelector("#resultado").innerHTML = textoResultado;
-} else {
-    alert("No se permiten mayúsculas, acentos ni caracteres especiales")
-}    
 }
 
 encriptButton.onclick = encriptar;
@@ -56,12 +54,3 @@ function copiar() {
 copiarTexto.onclick = copiar;
 
 // Termina Funcion para Copiar Texto
-
-// function desencriptar() {
-//     let textoEncriptado = textoIngresado.value.toLowerCase();
-//     let texto = textoEncriptado
-//         .replaceAll("enter", "e")
-//         .replaceAll("imes", "i")
-//         .replaceAll("ober", "o")
-//         .replaceAll("ai", "a")
-//         .replaceAll("ufat", "u");
