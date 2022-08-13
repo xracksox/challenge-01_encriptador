@@ -24,7 +24,7 @@ function encriptar() {
         alert("No se permiten mayúsculas, acentos ni caracteres especiales")
     }
 }
-encriptButton.onclick = encriptar;
+encriptButton.addEventListener('click', encriptar);
 
 // Termina Funcion para ENCRIPTAR Texto
 
@@ -44,7 +44,7 @@ function desencriptar() {
     document.querySelector("#textoCampo").value = "";
 }
 
-desencriptButton.onclick = desencriptar;
+desencriptButton.addEventListener('click', desencriptar);
 
 // Termina Funcion para DESENCRIPTAR Texto
 
@@ -59,6 +59,6 @@ function copiar() {
     alert("Texto copiado");
     document.querySelector("#textoCampo").value = "";
 }
-btnCopiar.onclick = copiar;
+btnCopiar.addEventListener('click', copiar);
 
 // Termina Funcion para Copiar Texto
