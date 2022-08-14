@@ -5,30 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
+    <link rel="shortcut icon" href="./img/Logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
+    <div class="encript__app">
+        <div class="section__logo"><a href="https://www.aluracursos.com/" target="_blank"><img src="./img/Logo.svg"
+                    alt="Logo AluraLATAM"></a></div>
 
-    <div class="logo">Logo Alura</div>
+        <div class="section__input">
+            <textarea id="textoCampo" placeholder="Ingrese el texto aquí"></textarea>
 
-    <div class="ingresar__texto">
-        <input type="text" id="textoCampo" placeholder="Ingrese el texto aquí">
-    </div>
-    <div class="botones__encrip">
-        <input type="button" id="encriptar" value="Encriptar">
-        <input type="button" id="desencriptar" value="Desencriptar">
-    </div>
-    <div class="resultado">
-        <textarea name="" id="resultado" cols="30" rows="10" readonly></textarea>
-        <input type="button" id="copiar" value="Copiar">
+            <div class="texto--malo">
+                <p class="botones--nota"><img src="/img/exclamation.svg" alt="Simbolo de exclamación"> Solo
+                    letras minúsculas, no se permiten caracteres especiales, ni acentos.</p>
+            </div>
+
+            <div class="botones__encrip">
+                <input type="button" id="encriptar" value="Encriptar">
+                <input type="button" id="desencriptar" value="Desencriptar">
+            </div>
+        </div>
+
+        <div id="error_msg" class="error__input--hide">
+            <p><img src="/img/exclamation.svg" alt="Simbolo de exclamación"> No se permiten mayúsculas, acentos ni
+                caracteres especiales</p>
+        </div>
+
+        <div id="copy_msg" class="copy__input--hide">
+            <p>Texto Copiado</p>
+        </div>
+
+
+        <div class="section__result">
+
+            <div class="result__container">
+
+                <div id="nomsg" class="resultado__no-msg">
+                    <img src="./img/munheco.svg" alt="No hay mensaje" class="nomsg--img">
+                    <p class="nomsg--black">Ningún mensaje fue encontrado</p>
+                    <p class="nomsg--gray">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+
+
+                <div id="msg" class="resultado__msg--hide">
+                    <textarea name="" id="resultado" cols="30" rows="10" readonly></textarea>
+                    <input type="button" id="copiar" value="Copiar">
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <footer class="pie">
+    <footer class="section__pie">
         <p class="pie--texto">&copy; AluraLATAM | Oracle Next Education</p>
-        <p class="pie--texto">Creado por <a class="pie--enlace" href="https://github.com/xracksox" target="_blank">Oscar Díaz</a></p>
+        <p class="pie--texto">Creado por <a class="pie--enlace" href="https://github.com/xracksox" target="_blank">Oscar
+                Díaz</a></p>
     </footer>
-
 
     <script type="text/javascript" src="script.js"></script>
 </body>
